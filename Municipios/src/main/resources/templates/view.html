@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Municipios</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+	<header th:replace="~{layout :: header}"></header>
+	<div class="container">
+		<form class="box">
+			<div class="field">
+				<label class="label">Buscar Municipio</label>
+				<div class="control">
+					<input class="input" type="text" placeholder="Coloque el nombre del municipio">
+				</div>
+			</div>
+
+			<button type="submit" class="button is-primary">Buscar</button>
+		</form>
+		<div class="box">
+			<p th:text="'Nombre: ' + ${municipiosDTO.nombre}" />
+			<p th:text="'ID: ' + ${municipiosDTO.id}" />
+			<p th:text="'Cabecera: ' + ${municipiosDTO.cabecera}" />
+			<p th:text="'Clave INEGI: ' + ${municipiosDTO.cveInegi}" />
+			<p th:text="'Nombres: ' + ${municipiosDTO.nombres}" />
+		</div>
+	</div>
+	<br>
+	<br>
+	<footer th:replace="~{layout :: footer}"></footer>
+</body>
+
+</html>
